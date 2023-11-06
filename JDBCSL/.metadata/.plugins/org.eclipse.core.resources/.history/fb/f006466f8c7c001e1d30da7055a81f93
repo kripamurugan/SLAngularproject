@@ -1,0 +1,5 @@
+package com.productdetails;
+
+public class DBConnection {
+
+}
