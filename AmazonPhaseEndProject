@@ -22,13 +22,13 @@ public class AmazonPhaseEndProject {
 		
 		
 		// USER ENTERS THE PHONE NUMBER/E-MAIL
-		driver.findElement(By.xpath("//input[@id='ap_email']")).sendKeys("7510955583");
+		driver.findElement(By.xpath("//input[@id='ap_email']")).sendKeys("75109*****");
 		driver.findElement(By.xpath("//input[@id='continue']")).click();
 		System.out.println("USER ENTERS THE PHONE NUMBER");
 		
 		
 		// USER ENTERS THE PASSWORD
-		driver.findElement(By.xpath("//input[@id='ap_password']")).sendKeys("Ikru@1999");
+		driver.findElement(By.xpath("//input[@id='ap_password']")).sendKeys("Ikru*****");
 		
 		
 		// SUBMIT
