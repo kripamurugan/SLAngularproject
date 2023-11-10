@@ -1,0 +1,80 @@
+package seleniumscripts;
+
+import java.io.IOException;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.Select;
+
+public class AmazonPhaseEndProject {
+
+	public static void main(String[] args) throws InterruptedException, IOException {
+		WebDriver driver = new ChromeDriver();
+		driver.manage().window().maximize();
+		driver.get("https://www.amazon.in/");
+
+		System.out.println("NAVIGATES TO THE AMAZON HOMEPAGE");
+		WebElement e1 = driver.findElement(By.xpath("//a[@id='nav-link-accountList']"));
+		e1.click();
+		Thread.sleep(2000);
+		
+		
+		// USER ENTERS THE PHONE NUMBER/E-MAIL
+		driver.findElement(By.xpath("//input[@id='ap_email']")).sendKeys("7510955583");
+		driver.findElement(By.xpath("//input[@id='continue']")).click();
+		System.out.println("USER ENTERS THE PHONE NUMBER");
+		
+		
+		// USER ENTERS THE PASSWORD
+		driver.findElement(By.xpath("//input[@id='ap_password']")).sendKeys("Ikru@1999");
+		
+		
+		// SUBMIT
+		driver.findElement(By.xpath("//input[@id='signInSubmit']")).click();
+		System.out.println("USER ENTERS THE PASSWORD");
+		
+		
+		//CATEGORY SELECTION BY THE USER
+		WebElement e2 = driver.findElement(By.xpath("//select[@id='searchDropdownBox']"));
+		e2.click();
+		Select obj = new Select(e2);
+		obj.selectByIndex(14);
+		System.out.println("CATEGORY IS SELECTED");
+		
+		
+		//Thread.sleep(2000);
+		//USER SEARCHES FOR I-PHONE 13
+		driver.findElement(By.xpath("//input[@id='twotabsearchtextbox']")).sendKeys("I phone 13");
+		
+		
+	
+		//search button clicked
+		driver.findElement(By.xpath("//input[@id='nav-search-submit-button']")).click();
+		System.out.println("USER CLICKS ON THE SEARCH BUTTON");
+		
+		
+	
+		//USER SELECT A PRODUCT
+		WebElement e3=driver.findElement(By.xpath("//a[@class='a-link-normal s-underline-text s-underline-link-text s-link-style a-text-normal'][1]"));
+		e3.click();
+		System.out.println("THE DESIRED PRODUCT IS SELECTED BY THE USER");
+		//Thread.sleep(2000);
+		//USER NAVIGATING TO THE NEW TAB
+		for (String handle : driver.getWindowHandles()) {
+		    	driver.switchTo().window(handle);
+		}
+		
+		
+		//Thread.sleep(2000);
+		//THE DESIRED PRODUCT IS ADDED TO THE WISHLIST 
+		driver.findElement(By.xpath("//div[@id='add-to-wishlist-button-group']")).click();
+		System.out.println("THE PRODUCT IS ADDED TO THE WISHLIST BY THE USER");
+		Thread.sleep(2000);
+
+
+		driver.close();		
+	}
+
+}
