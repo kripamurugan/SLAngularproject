@@ -1,0 +1,144 @@
+package seleniumscripts;
+import java.io.IOException;
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class RedBusProject {
+
+	public static void main(String[] args) throws InterruptedException, IOException {
+
+		WebDriver driver = new ChromeDriver();
+
+		driver.manage().window().maximize();
+
+		driver.get("https://www.redbus.com/");
+
+		Thread.sleep(5000);
+		driver.findElement(By.xpath("//input[@placeholder='Ex: Paris']")).sendKeys("Trivandrum");
+		driver.findElement(By.xpath("//input[@placeholder='Ex: London Airport']")).sendKeys("Chennai, Tamil Nadu, India");
+		JavascriptExecutor js = ((JavascriptExecutor) driver);
+
+		js.executeScript("document.getElementById('onward_cal').value='11/12/2024'");
+		//driver.findElement(By.xpath("//div[@class='search-lbl']")).click();
+		
+		driver.navigate().to("https://www.remove.bg/");
+		
+	
+		driver.findElement(By.xpath("//div[@class='mx-auto w-full px-8 max-w-5xl relative']/descendant::button[1]")).click();
+		
+		Runtime.getRuntime().exec("C:\\Users\\user\\OneDrive\\Desktop\\AutoIT_Files\\ScriptUpload1.exe");
+		//driver.close();
+
+	}
+
+}
+/////////////////////////////////////////////////SeleniumWithJDBC.java//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+package seleniumscripts;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
+
+public class SeleniumWithJDBC {
+    private WebDriver driver;
+
+    @BeforeTest
+    public void setup() {
+
+        // Create a new instance of the ChromeDriver
+        driver = new ChromeDriver();
+    }
+
+    @Test
+    public void testVerifyDB() throws ClassNotFoundException, SQLException {
+        // Step 1: Load the driver class
+        Class.forName("oracle.jdbc.driver.OracleDriver");
+
+        // Step 2: Create the connection object
+        Connection con = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe", "root", "kripa@1999");
+
+        // Step 3: Create the statement object
+        Statement stmt = con.createStatement();
+
+        // Step 4: Execute the SQL query
+        ResultSet rs = stmt.executeQuery("SELECT * FROM Products");
+
+        // Step 5: Iterate through the result set and perform web testing
+        while (rs.next()) {
+            int productId = rs.getInt(1);
+            String productName = rs.getString(2);
+            String productPrice = rs.getString(3);
+
+            // Perform web testing using Selenium
+            driver.get("https://www.seleniumhq.org");
+            WebElement searchInput = driver.findElement(By.id("q"));
+            searchInput.sendKeys(productName);
+            searchInput.submit();
+
+            // Print the database record and web page title
+            System.out.println("Product ID: " + productId);
+            System.out.println("Product Name: " + productName);
+            System.out.println("Product Price: " + productPrice);
+            System.out.println("Web Page Title: " + driver.getTitle());
+            System.out.println("--------------------------------------------");
+        }
+
+        // Step 6: Close the connection object
+        con.close();
+    }
+
+    @AfterTest
+    public void teardown() {
+        // Close the browser
+        driver.quit();
+    }
+}
+///////////////////////////////////////ScreenshotDemo.java/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+package seleniumscripts;
+
+import java.io.File;
+import java.io.IOException;
+
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class ScreenshotDemo {
+
+	public static void main(String[] args) throws IOException {
+
+		WebDriver driver = new ChromeDriver();
+
+		driver.manage().window().maximize();
+
+		driver.get("https://www.redbus.in/");
+
+		File srcFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+
+		// Create a file at the destination and store the screenshot there.
+		// ./ to take current project folder structure
+
+		File destFile = new File("./Screenshots/redbus.png");
+
+		FileUtils.copyFile(srcFile, destFile);
+
+		driver.close();
+
+	}
+
+}
