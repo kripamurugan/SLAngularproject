@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [test1]">
+  <test thread-count="5" name="RedBusTicket(failed)">
+    <classes>
+      <class name="in.redbus.testpages.AccountPageTest">
+        <methods>
+          <include name="generateTestStatus"/>
+          <include name="getnameMethod"/>
+          <include name="OpenApp"/>
+          <include name="generateReports"/>
+          <include name="CloseApp"/>
+          <include name="InitalizeExtentReport"/>
+          <include name="clickOnSignUpPage"/>
+        </methods>
+      </class> <!-- in.redbus.testpages.AccountPageTest -->
+    </classes>
+  </test> <!-- RedBusTicket(failed) -->
+</suite> <!-- Failed suite [test1] -->

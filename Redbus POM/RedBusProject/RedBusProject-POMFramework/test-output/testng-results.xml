@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="6" total="10" passed="4" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2023-11-19T22:08:25 IST" name="test1" finished-at="2023-11-19T22:09:30 IST" duration-ms="65380">
+    <groups>
+    </groups>
+    <test started-at="2023-11-19T22:08:25 IST" name="RedBusTicket" finished-at="2023-11-19T22:09:30 IST" duration-ms="65380">
+      <class name="in.redbus.testpages.BookBusTicketTest">
+        <test-method is-config="true" signature="OpenApp()[pri:0, instance:in.redbus.testpages.BookBusTicketTest@68c9133c]" started-at="2023-11-19T22:09:12 IST" name="OpenApp" finished-at="2023-11-19T22:09:24 IST" duration-ms="11519" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- OpenApp -->
+        <test-method signature="SearchBus()[pri:0, instance:in.redbus.testpages.BookBusTicketTest@68c9133c]" started-at="2023-11-19T22:09:24 IST" name="SearchBus" finished-at="2023-11-19T22:09:30 IST" duration-ms="5708" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SearchBus -->
+        <test-method is-config="true" signature="generateTestStatus(java.lang.reflect.Method,org.testng.ITestResult)[pri:0, instance:in.redbus.testpages.BookBusTicketTest@68c9133c]" started-at="2023-11-19T22:09:30 IST" name="generateTestStatus" finished-at="2023-11-19T22:09:30 IST" duration-ms="3" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void in.redbus.testpages.BookBusTicketTest.SearchBus() throws java.lang.InterruptedException]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[[TestResult name=SearchBus status=SUCCESS method=BookBusTicketTest.SearchBus()[pri:0, instance:in.redbus.testpages.BookBusTicketTest@68c9133c] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- generateTestStatus -->
+        <test-method is-config="true" signature="CloseApp()[pri:0, instance:in.redbus.testpages.BookBusTicketTest@68c9133c]" started-at="2023-11-19T22:09:30 IST" name="CloseApp" finished-at="2023-11-19T22:09:30 IST" duration-ms="369" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CloseApp -->
+      </class> <!-- in.redbus.testpages.BookBusTicketTest -->
+      <class name="in.redbus.testpages.NavigateTest">
+        <test-method is-config="true" signature="InitalizeExtentReport()[pri:0, instance:in.redbus.testpages.NavigateTest@3f191845]" started-at="2023-11-19T22:08:24 IST" name="InitalizeExtentReport" finished-at="2023-11-19T22:08:25 IST" duration-ms="608" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- InitalizeExtentReport -->
+        <test-method is-config="true" signature="getnameMethod(org.testng.ITestContext)[pri:0, instance:in.redbus.testpages.NavigateTest@3f191845]" started-at="2023-11-19T22:08:25 IST" name="getnameMethod" finished-at="2023-11-19T22:08:25 IST" duration-ms="25" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@7e91ed74]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getnameMethod -->
+        <test-method is-config="true" signature="OpenApp()[pri:0, instance:in.redbus.testpages.NavigateTest@3f191845]" started-at="2023-11-19T22:08:25 IST" name="OpenApp" finished-at="2023-11-19T22:08:34 IST" duration-ms="9597" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- OpenApp -->
+        <test-method signature="clickOnAccount()[pri:49, instance:in.redbus.testpages.NavigateTest@3f191845]" started-at="2023-11-19T22:08:34 IST" name="clickOnAccount" finished-at="2023-11-19T22:08:38 IST" duration-ms="4120" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clickOnAccount -->
+        <test-method is-config="true" signature="generateTestStatus(java.lang.reflect.Method,org.testng.ITestResult)[pri:0, instance:in.redbus.testpages.NavigateTest@3f191845]" started-at="2023-11-19T22:08:38 IST" name="generateTestStatus" finished-at="2023-11-19T22:08:38 IST" duration-ms="9" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void in.redbus.testpages.NavigateTest.clickOnAccount() throws java.lang.InterruptedException]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[[TestResult name=clickOnAccount status=SUCCESS method=NavigateTest.clickOnAccount()[pri:49, instance:in.redbus.testpages.NavigateTest@3f191845] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- generateTestStatus -->
+        <test-method signature="clickOncabrental()[pri:50, instance:in.redbus.testpages.NavigateTest@3f191845]" started-at="2023-11-19T22:08:38 IST" name="clickOncabrental" finished-at="2023-11-19T22:08:47 IST" duration-ms="8809" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clickOncabrental -->
+        <test-method is-config="true" signature="generateTestStatus(java.lang.reflect.Method,org.testng.ITestResult)[pri:0, instance:in.redbus.testpages.NavigateTest@3f191845]" started-at="2023-11-19T22:08:47 IST" name="generateTestStatus" finished-at="2023-11-19T22:08:47 IST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void in.redbus.testpages.NavigateTest.clickOncabrental() throws java.lang.InterruptedException]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[[TestResult name=clickOncabrental status=SUCCESS method=NavigateTest.clickOncabrental()[pri:50, instance:in.redbus.testpages.NavigateTest@3f191845] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- generateTestStatus -->
+        <test-method is-config="true" signature="CloseApp()[pri:0, instance:in.redbus.testpages.NavigateTest@3f191845]" started-at="2023-11-19T22:08:47 IST" name="CloseApp" finished-at="2023-11-19T22:08:48 IST" duration-ms="486" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CloseApp -->
+        <test-method is-config="true" signature="generateReports()[pri:0, instance:in.redbus.testpages.NavigateTest@3f191845]" started-at="2023-11-19T22:09:30 IST" name="generateReports" finished-at="2023-11-19T22:09:31 IST" duration-ms="1382" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- generateReports -->
+      </class> <!-- in.redbus.testpages.NavigateTest -->
+      <class name="in.redbus.testpages.AccountPageTest">
+        <test-method is-config="true" signature="OpenApp()[pri:0, instance:in.redbus.testpages.AccountPageTest@48075da3]" started-at="2023-11-19T22:08:48 IST" name="OpenApp" finished-at="2023-11-19T22:08:59 IST" duration-ms="11718" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- OpenApp -->
+        <test-method signature="clickOnSignUpPage()[pri:0, instance:in.redbus.testpages.AccountPageTest@48075da3]" started-at="2023-11-19T22:08:59 IST" name="clickOnSignUpPage" finished-at="2023-11-19T22:09:12 IST" duration-ms="12242" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clickOnSignUpPage -->
+        <test-method is-config="true" signature="generateTestStatus(java.lang.reflect.Method,org.testng.ITestResult)[pri:0, instance:in.redbus.testpages.AccountPageTest@48075da3]" started-at="2023-11-19T22:09:12 IST" name="generateTestStatus" finished-at="2023-11-19T22:09:12 IST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void in.redbus.testpages.AccountPageTest.clickOnSignUpPage() throws java.lang.InterruptedException]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[[TestResult name=clickOnSignUpPage status=SUCCESS method=AccountPageTest.clickOnSignUpPage()[pri:0, instance:in.redbus.testpages.AccountPageTest@48075da3] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- generateTestStatus -->
+        <test-method is-config="true" signature="CloseApp()[pri:0, instance:in.redbus.testpages.AccountPageTest@48075da3]" started-at="2023-11-19T22:09:12 IST" name="CloseApp" finished-at="2023-11-19T22:09:12 IST" duration-ms="699" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CloseApp -->
+      </class> <!-- in.redbus.testpages.AccountPageTest -->
+    </test> <!-- RedBusTicket -->
+  </suite> <!-- test1 -->
+</testng-results>
