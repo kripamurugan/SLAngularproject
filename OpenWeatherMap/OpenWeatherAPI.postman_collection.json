@@ -1,0 +1,157 @@
+{
+	"info": {
+		"_postman_id": "ea544efa-0cbe-4deb-a611-6cde52f9f2e8",
+		"name": "OpenWeatherAPI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31715007"
+	},
+	"item": [
+		{
+			"name": "GetWeatherLatLong",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}?lat=28.61&lon=77.20&appid={{APIKEY_COL}}",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"query": [
+						{
+							"key": "lat",
+							"value": "28.61"
+						},
+						{
+							"key": "lon",
+							"value": "77.20"
+						},
+						{
+							"key": "appid",
+							"value": "{{APIKEY_COL}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetCityID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}?id=1261588&appid={{API_KEY}}",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1261588"
+						},
+						{
+							"key": "appid",
+							"value": "{{API_KEY}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetCityByName",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"pm.environment.set(\"City\",\"Kerala\");\r",
+							"pm.globals.set(\"global_var1\", \"global-1\");"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}?q={{City}}&appid={{API_KEY}}&units=metric",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "{{City}}"
+						},
+						{
+							"key": "appid",
+							"value": "{{API_KEY}}"
+						},
+						{
+							"key": "units",
+							"value": "metric"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetLanguage",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}?id=524901&lang=fr&appid={{API_KEY}}",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "524901"
+						},
+						{
+							"key": "lang",
+							"value": "fr"
+						},
+						{
+							"key": "appid",
+							"value": "{{API_KEY}}"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "APIKEY_COL",
+			"value": "",
+			"type": "string"
+		}
+	]
+}
